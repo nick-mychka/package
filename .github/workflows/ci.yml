@@ -1,0 +1,18 @@
+name: "[STATIC CODE ANALYZE]"
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup node 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          registry-url: https://npm.pkg.github.com/
+
+      - run: yarn install
+      - run: yarn build

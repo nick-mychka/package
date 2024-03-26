@@ -7,8 +7,9 @@
     "test": "exit 0"
   },
   "author": "nmychka",
-  "license": "ISC",
+  "license": "MIT",
   "publishConfig": {
-    "@nick-mychka:registry": "https://npm.pkg.github.com"
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
   }
 }
